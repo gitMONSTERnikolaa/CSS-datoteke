@@ -1,56 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-
-*{
-    box-sizing: border-box;
+a[href*="google.com"] {
+    color: green;
 }
 
-body{
-    margin: 0;
-}
-.header{
-    text-align: center;
-    padding: 32px;
-}
-.header h1{
-    font-family: 'Sacramento';
-    font-size: 50px;
+
+a[href="https://linkgroup.rs"] {
+    color: red;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0px 100px 100px 100px;
+
+#second-div p:nth-child(2n+4) {
+    color: red;
 }
-.column{
-    flex: 25%;
-    max-width: 25%;
-}
-.img-hover-zoom{
-    height: auto;
-    overflow: hidden;
-    border: 5px solid #ffff;
-}
-.img-hover-zoom img{
-    vertical-align: middle;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition:  transform .5s ease;
-}
-.img-hover-zoom:hover img{
-    transform: scale(1.5);
+#second-div p:nth-child(2n+5) {
+    color: blue;
 }
 
-@media screen and (max-width: 800px) {
-    .column{
-        flex: 50%;
-        max-width: 50%;
-    }
+
+p:nth-of-type(2)::after,
+p:nth-of-type(3)::after {
+    content: " – NEW";
+    color: yellow;
 }
 
-@media screen and (max-width: 500px) {
-    .column{
-        flex: 100%;
-        max-width: 100%;
-    }
+
+p:nth-of-type(10):hover {
+    font-style: italic;
 }
+
+
+
